@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Love ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:#09050b;color:#fff;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.09;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:2}
+.particle{position:absolute;animation:float linear infinite;opacity:.7}
+@keyframes float{0%{transform:translateY(105vh) scale(.4) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-10vh) scale(1.2) rotate(360deg);opacity:0}}
+.hero{
+  min-height:100vh;display:grid;place-items:center;text-align:center;position:relative;
+  padding:40px 20px;overflow:hidden;
+  background:radial-gradient(circle at 50% 35%,#4d0c2d 0,#190713 35%,#09050b 75%);
+}
+.hero:after{content:"";position:absolute;width:650px;height:650px;border-radius:50%;background:#ff2d75;filter:blur(140px);opacity:.13}
+.hero-content{position:relative;z-index:3;max-width:900px}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;color:#ff9fc1;font:600 12px Arial,sans-serif}
+h1{font-size:clamp(55px,10vw,125px);line-height:.9;margin:25px 0;background:linear-gradient(120deg,#fff,#ff9fc1,#ffd7e5,#fff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 45px #ff2d7540}
+.subtitle{font:18px Arial,sans-serif;color:#f7cfdd;max-width:650px;margin:25px auto;line-height:1.8}
+.btn{
+ display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;border:1px solid #ff9fc166;
+ padding:15px 25px;border-radius:999px;background:#ffffff0d;backdrop-filter:blur(10px);
+ transition:.3s;font:600 13px Arial,sans-serif;letter-spacing:1px
+}
+.btn:hover{transform:translateY(-4px);background:#ff2d7520;box-shadow:0 12px 35px #ff2d7533}
+.scroll{margin-top:55px;font:11px Arial,sans-serif;letter-spacing:3px;color:#d8aaba;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+section{position:relative;z-index:3;padding:110px 7%}
+.section-title{text-align:center;font-size:clamp(35px,5vw,65px);margin-bottom:18px}
+.section-sub{text-align:center;color:#c9aeb9;font:15px Arial,sans-serif;max-width:650px;margin:0 auto 55px;line-height:1.8}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto}
+.photo{
+ height:370px;border-radius:24px;overflow:hidden;position:relative;background:#160b12;border:1px solid #ffffff14;
+ transform:translateY(35px);opacity:0;transition:1s;
+}
+.photo.show{transform:none;opacity:1}
+.photo:nth-child(2){margin-top:50px}.photo:nth-child(3){margin-top:15px}
+.photo img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.photo:hover img{transform:scale(1.07)}
+.photo span{position:absolute;bottom:0;left:0;right:0;padding:45px 20px 20px;background:linear-gradient(transparent,#080308);font-size:18px}
+.memory{background:linear-gradient(180deg,#09050b,#170711,#09050b)}
+.video-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.video-card{border:1px solid #ffffff14;background:#ffffff08;padding:12px;border-radius:25px;backdrop-filter:blur(15px)}
+video{width:100%;display:block;border-radius:18px;background:#050307;max-height:500px}
+.caption{padding:18px 8px 8px;color:#f3c8d8;font:14px Arial,sans-serif}
+.letter-wrap{max-width:850px;margin:auto;background:linear-gradient(135deg,#ffffff0d,#ff2d7510);border:1px solid #ffffff18;border-radius:35px;padding:55px;box-shadow:0 25px 80px #0008}
+.letter{font-size:21px;line-height:2;color:#f6dce6}
+.letter:first-letter{font-size:65px;float:left;line-height:.8;color:#ff729f;padding-right:8px}
+.timeline{max-width:850px;margin:auto;position:relative}
+.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#ff709b55}
+.event{width:50%;padding:20px 45px;position:relative}.event:nth-child(even){margin-left:50%}
+.event:after{content:"❤️";position:absolute;top:24px;right:-10px;font-size:16px}.event:nth-child(even):after{left:-10px;right:auto}
+.event h3{font-size:25px;color:#ffadc7;margin-bottom:8px}.event p{font:14px Arial,sans-serif;color:#c9aeb9;line-height:1.7}
+.cake-section{text-align:center;background:radial-gradient(circle,#351022,#09050b 65%)}
+.cake{font-size:100px;animation:cake 2s infinite ease-in-out;display:inline-block}
+@keyframes cake{50%{transform:translateY(-10px) rotate(2deg)}}
+.final{text-align:center;min-height:70vh;display:grid;place-items:center;background:linear-gradient(#09050b,#200814)}
+.final h2{font-size:clamp(45px,8vw,100px);background:linear-gradient(90deg,#fff,#ff80aa,#fff);-webkit-background-clip:text;color:transparent}
+.final p{font:16px Arial,sans-serif;color:#d7b7c4;margin:25px auto;max-width:600px;line-height:1.8}
+footer{text-align:center;padding:25px;color:#765866;font:11px Arial,sans-serif}
+.music{
+ position:fixed;right:20px;bottom:20px;z-index:10;width:52px;height:52px;border-radius:50%;
+ border:1px solid #ff9fc166;background:#210b17;color:white;cursor:pointer;font-size:20px;box-shadow:0 10px 30px #0008
+}
+@media(max-width:750px){
+ section{padding:80px 5%}.gallery,.video-grid{grid-template-columns:1fr}
+ .photo,.photo:nth-child(2),.photo:nth-child(3){margin-top:0;height:430px}
+ .letter-wrap{padding:30px 24px}.letter{font-size:18px}
+ .timeline:before{left:10px}.event,.event:nth-child(even){width:100%;margin-left:0;padding-left:35px;padding-right:5px}
+ .event:after,.event:nth-child(even):after{left:0;right:auto}
+}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">A little website made with a lot of love</div>
+    <h1>Happy Birthday,<br>My Love ❤️</h1>
+    <p class="subtitle">To the girl who turned ordinary days into my favorite memories. Today is all about you.</p>
+    <a class="btn" href="#memories">Open Our Story ↓</a>
+    <div class="scroll">SCROLL TO BEGIN</div>
+  </div>
+</header>
+
+<section id="memories">
+  <div class="eyebrow" style="text-align:center">Our little universe</div>
+  <h2 class="section-title">Beautiful Memories</h2>
+  <p class="section-sub">Replace these images with your favorite pictures together. Every photo deserves its own little moment.</p>
+  <div class="gallery">
+    <div class="photo"><img src="images/photo1.jpg" alt="Our memory"><span>That smile I could never forget.</span></div>
+    <div class="photo"><img src="images/photo2.jpg" alt="Our memory"><span>My favorite place is beside you.</span></div>
+    <div class="photo"><img src="images/photo3.jpg" alt="Our memory"><span>One memory, a thousand feelings.</span></div>
+    <div class="photo"><img src="images/photo4.jpg" alt="Our memory"><span>Us, exactly as we are.</span></div>
+    <div class="photo"><img src="images/photo5.jpg" alt="Our memory"><span>Little moments, forever memories.</span></div>
+    <div class="photo"><img src="images/photo6.jpg" alt="Our memory"><span>And I'd choose you again.</span></div>
+  </div>
+</section>
+
+<section class="memory">
+  <div class="eyebrow" style="text-align:center">Press play</div>
+  <h2 class="section-title">Our Videos 🎥</h2>
+  <p class="section-sub">Put your special clips inside the <b>videos</b> folder and rename them video1.mp4, video2.mp4.</p>
+  <div class="video-grid">
+    <div class="video-card"><video controls playsinline poster="videos/video1.mp4"><source src="videos/video1.mp4" type="video/mp4"></video><div class="caption">A little piece of our story. ❤️</div></div>
+    <div class="video-card"><video controls playsinline poster="videos/video2.mp4"><source src="videos/video2.mp4" type="video/mp4"></video><div class="caption">A moment I want to remember forever. 💕</div></div>
+    <!-- <div class="video-card"><video controls playsinline poster="videos/video3.mp4"><source src="videos/video3.mp4" type="video/mp4"></video><div class="caption">Another beautiful memory. ✨</div></div>
+    <div class="video-card"><video controls playsinline poster="videos/video4.mp4"><source src="videos/video4.mp4" type="video/mp4"></video><div class="caption">Us, together. Always. ❤️</div></div> -->
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow" style="text-align:center">From my heart</div>
+  <h2 class="section-title">A Letter For You 💌</h2>
+  <div class="letter-wrap">
+    <p class="letter">My love, on your birthday I just want you to know how grateful I am that our paths crossed. You are more than a beautiful part of my life — you are the person who makes the little things feel special. I hope this new year of your life brings you countless smiles, peaceful days, big dreams and every happiness you deserve. Thank you for every laugh, every memory and every moment. No matter how many birthdays come and go, I want to keep making memories with you. Happy Birthday, my beautiful wife. I love you, today, tomorrow, and in every chapter still waiting for us. ❤️</p>
+  </div>
+</section>
+
+<section class="memory">
+  <div class="eyebrow" style="text-align:center">Our journey</div>
+  <h2 class="section-title">Little Chapters</h2>
+  <p class="section-sub">Edit these dates and moments to tell your real story.</p>
+  <div class="timeline">
+    <div class="event"><h3>The Beginning</h3><p>The day our story started. A simple moment that became something unforgettable.</p></div>
+    <div class="event"><h3>Our First Memory</h3><p>The first moment that made you realize this was going to be special.</p></div>
+    <div class="event"><h3>The “Us” Era</h3><p>Somewhere along the way, “me and you” became “us.”</p></div>
+    <div class="event"><h3>Forever</h3><p>And this is only the beginning of everything we still have to experience together.</p></div>
+  </div>
+</section>
+
+<section class="cake-section">
+  <div class="cake">🎂</div>
+  <h2 class="section-title">Make A Wish, Birthday Girl</h2>
+  <p class="section-sub">I hope every wish you make today finds its way to you. And if one of those wishes is about us… I already know mine. ❤️</p>
+</section>
+
+<section class="final">
+  <div>
+    <div class="eyebrow">One last thing</div>
+    <h2>Forever<br>With You ❤️</h2>
+    <p>Happy Birthday to my favorite person, my beautiful wife, and my home. Here's to another year of laughter, adventures, silly moments, and loving you a little more every day.</p>
+    <a class="btn" href="#memories">Replay Our Story ↑</a>
+  </div>
+</section>
+
+<footer>Made with ❤️ especially for you.</footer>
+
+<button class="music" id="musicBtn" title="Play our song">♫</button>
+<audio id="music" loop><source src="music/our-song.mp3" type="audio/mpeg"></audio>
+
+<script>
+const particleBox=document.getElementById('particles');
+const symbols=['❤','♡','✦','•'];
+for(let i=0;i<34;i++){
+ const p=document.createElement('div');p.className='particle';p.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+ p.style.left=Math.random()*100+'%';p.style.fontSize=(8+Math.random()*18)+'px';
+ p.style.animationDuration=(7+Math.random()*13)+'s';p.style.animationDelay=(-Math.random()*15)+'s';
+ particleBox.appendChild(p);
+}
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.photo').forEach(x=>observer.observe(x));
+
+const music=document.getElementById('music'),btn=document.getElementById('musicBtn');
+btn.onclick=async()=>{
+ if(music.paused){try{await music.play();btn.textContent='❚❚'}catch(e){alert('Add your song as music/our-song.mp3 first.')}} 
+ else{music.pause();btn.textContent='♫'}
+};
+</script>
+</body>
+</html>
